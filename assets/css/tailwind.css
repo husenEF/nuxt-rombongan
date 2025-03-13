@@ -2,11 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ... */
-
 @layer base {
   :root {
-
     --background: 0 0% 100%;
 
     --foreground: 0 0% 3.9%;
@@ -55,10 +52,57 @@
 
     --chart-5: 27 87% 67%;
 
-    --radius: 0.5rem
-  }
-  .dark {
+    --radius: 0.5rem;
+    /* viridian green */
+    --green-600: 179, 100%, 32%, 1;
+    --green-500: 179, 56%, 45%, 1;
+    --green-400: 178, 46%, 59%, 1;
+    --green-300: 179, 46%, 73%, 1;
+    --green-200: 178, 46%, 86%, 1;
+    --green-100: 176, 52%, 94%, 1;
+    --green-50: 180, 29%, 95%, 1;
+    --green-30: 180, 33%, 98%, 1;
 
+    /* Yellow */
+    --yellow-600: 36, 100%, 63%, 1;
+    --yellow-500: 36, 100%, 71%, 1;
+    --yellow-400: 35, 100%, 78%, 1;
+    --yellow-300: 36, 100%, 85%, 1;
+    --yellow-200: 36, 100%, 93%, 1;
+    --yellow-100: 35, 100%, 96%, 1;
+    --yellow-50: 33, 100%, 98%, 1;
+
+    /* cosmic latte */
+    --cosmic-500: 44, 93%, 89%, 1;
+    --cosmic-400: 44, 100%, 95%, 1;
+    --cosmic-300: 43, 100%, 96%, 1;
+    --cosmic-200: 45, 100%, 97%, 1;
+    --cosmic-100: 42, 100%, 98%, 1;
+    --cosmic-50: 48, 100%, 99%, 1;
+
+    /* accent color */
+    --indian-red-600: 0, 68%, 62%, 1;
+    --indian-red-500: 0, 68%, 70%, 1;
+    --indian-red-400: 0, 67%, 77%, 1;
+    --indian-red-300: 0, 69%, 85%, 1;
+    --indian-red-200: 0, 68%, 93%, 1;
+    --indian-red-100: 0, 68%, 96%, 1;
+    --indian-red-50: 0, 60%, 98%, 1;
+    --indian-red-30: 0, 60%, 99%, 1;
+
+    /* teal color */
+    --teal-700: 179, 84%, 15%, 1;
+    --teal-600: 178, 19%, 37%, 1;
+    --teal-500: 178, 13%, 50%, 1;
+    --teal-400: 178, 17%, 59%, 1;
+    --teal-300: 180, 10%, 69%, 1;
+    --teal-200: 180, 7%, 83%, 1;
+    --teal-100: 180, 5%, 89%, 1;
+    --teal-50: 0, 0%, 93%, 1;
+    --teal-30: 0, 0%, 97%, 1;
+  }
+
+  .dark {
     --background: 0 0% 3.9%;
 
     --foreground: 0 0% 98%;
@@ -105,7 +149,7 @@
 
     --chart-4: 280 65% 60%;
 
-    --chart-5: 340 75% 55%
+    --chart-5: 340 75% 55%;
   }
 }
 
@@ -113,6 +157,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
