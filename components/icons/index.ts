@@ -1,0 +1,1 @@
+export { default as PepyIcon } from './pepy-icon.vue'
