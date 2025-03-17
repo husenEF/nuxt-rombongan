@@ -14,11 +14,9 @@ definePageMeta({
   <div class="flex flex-col h-screen">
     <div class="flex flex-1 w-full items-center justify-center relative">
       <div class="w-full h-1/2 bg-green-50 absolute top-0">
-          <LoginAnimation />
+        <LoginAnimation />
       </div>
-      <div class="z-10">
-        <LoginForm />
-      </div>
+      <LoginForm />
     </div>
     <footer class="bg-teal-600 p-12">
       <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">

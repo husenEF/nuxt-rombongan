@@ -4,6 +4,9 @@ export default {
     content: [],
     theme: {
     	extend: {
+			fontFamily:{
+				'mukta':['Mukta','sans-serif']
+			},
     		borderRadius: {
     			lg: 'var(--radius)',
     			md: 'calc(var(--radius) - 2px)',
