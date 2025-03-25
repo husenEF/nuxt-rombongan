@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -101,6 +101,10 @@
     --teal-100: 180, 5%, 89%, 1;
     --teal-50: 0, 0%, 93%, 1;
     --teal-30: 0, 0%, 97%, 1;
+    /* grey color */
+    --grey-800: 0, 0%, 100%, 1;
+    --grey-500: 0, 0%, 96%, 1;
+    --grey-300: 0, 0%, 51%, 1;
   }
 
   .dark {
@@ -163,4 +167,3 @@
     @apply bg-background text-foreground;
   }
 }
-

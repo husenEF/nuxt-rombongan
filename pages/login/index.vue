@@ -2,8 +2,6 @@
 export const description = "A simple login form.";
 </script>
 <script setup lang="ts">
-
-import { NuxtImg } from "#components";
 import LoginAnimation from "~/components/animation/login-animation.vue";
 import LoginForm from "@/components/auth/LoginForm.vue";
 definePageMeta({
@@ -19,7 +17,9 @@ definePageMeta({
       <LoginForm />
     </div>
     <footer class="bg-teal-600 p-12">
-      <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+      <div
+        class="container mx-auto flex flex-col md:flex-row items-center justify-between"
+      >
         <div class="flex gap-4">
           <a href="#" class="text-white">Terms and Conditions</a>
           <a href="#" class="text-white">Privacy Policy</a>
