@@ -1,53 +1,37 @@
 <script lang="ts" setup>
-import { reactive } from "vue";
+import type { IStep } from "@/type/IStep";
 
-const lists = reactive([
-  {
-    id: 1,
-    title: "Onboarding",
-    description: "",
-    active: true,
-  },
-  {
-    id: 2,
-    title: "Set up Workspace",
-    description: "",
-    active: false,
-  },
-  {
-    id: 3,
-    title: "Choose Module",
-    description: "",
-    active: false,
-  },
-  {
-    id: 4,
-    title: "Finish",
-    description: "",
-    active: false,
-  },
-]);
+const { steps = [] } = defineProps<{ steps?: Array<IStep> }>();
 </script>
 <template>
-  <ol class="relative border-s border-blue-700 text-teal-400 w-[70%]">
-    <li
-      v-for="(list, index) in lists"
-      :key="list.id"
-      :class="[
-        'ms-6',
-        ,
-        'relative',
-        'pt-2',
-        { 'mb-10': index !== lists.length - 1, 'text-teal-700': list.active },
-      ]"
-    >
-      <span
-        class="absolute flex items-center justify-center w-8 h-8 bg-green-200 rounded-full ring-4 ring-white dark:ring-gray-900 dark:bg-green-900 -left-10 top-0"
-      >
+  <ol class="relative w-[70%]">
+    <li v-for="(list, index) in steps" :key="list.id" :class="[
+      'pl-6',
+      'relative',
+      'pt-2',
+      'mb-2',
+      {
+        'pb-10': index !== steps.length - 1,
+        'text-teal-700 before:border-l-2 font-bold': list.active,
+        'text-teal-400 before:border-l': !list.active,
+        'font-bold': list.finish,
+      },
+      ' before:-left-1 before:absolute before:bottom-0 before:h-7 before:border-l-teal-700',
+    ]">
+      <Icon v-if="list.finish" name="lets-icons:check-fill" :class="[
+        'absolute flex items-center justify-center w-10 h-10 -left-6 top-0 border rounded-full',
+        'bg-teal-700',
+      ]" />
+      <span v-else :class="[
+        'absolute flex items-center justify-center w-10 h-10 bg-[#ffffff] text-teal-700 rounded-full -left-6 top-0',
+        {
+          'border-2 border-teal-900 ': list.active,
+          'border !border-teal-400': !list.active,
+        },
+      ]">
         {{ list.id }}
       </span>
-      <h3 class="font-medium leading-tight">{{ list.title }}</h3>
-      <p v-if="list.description" class="text-sm">{{ list.description }}</p>
+      {{ list.title }}
     </li>
   </ol>
 </template>
