@@ -36,7 +36,7 @@ const steps = [
 </script>
 
 <template>
-  <div class="flex w-full flex-col md:flex-row relative">
+  <div class="flex w-full flex-col md:flex-row relative ">
     <div class="bg-green-50 justify-center p-4 flex flex-col basis-1/1 md:basis-2/3 md:h-[calc(100vh-96px)]">
       <div class="max-w-3xl mx-auto flex flex-col gap-4">
         <div>

@@ -2,6 +2,7 @@
 import { reactive } from "vue";
 import { VerticalStepper } from "@/components/stepper/index";
 import { Input } from "@/components/ui/input";
+import { NuxtLink } from "#components";
 
 definePageMeta({
   layout: "with-header",
@@ -34,7 +35,7 @@ const steps = reactive([
     active: false,
   },
 ]);
-const handleSubmit = (data) => {
+const handleSubmit = (data: any) => {
   console.log({ handleSubmit: data });
 };
 </script>
@@ -53,12 +54,20 @@ const handleSubmit = (data) => {
           </h3>
         </div>
         <form class="clearfix flex gap-4 flex-col" @submit.prevent="handleSubmit">
-          <div class="w-1/2">
-            <label>Workspace Name <em class="text-red-500">*</em></label>
-            <Input placeholder="Workspace name" class="bg-white" />
+          <div class="w-3/5">
+            <label class="text-teal-600 font-mukta font-semibold">Workspace Name <em class="text-red-500">*</em></label>
+            <div class="flex gap-2">
+              <Button type="button" variant="outline" class="px-2 relative">
+                <Icon name="hugeicons:image-01" class="fill-teal-100 h-4 w-4" />
+                <span class="absolute right-0.5 bottom-0 bg-white rounded-full">
+                  <Icon name="line-md:plus" class="text-green-600 h-3 w-3" />
+                </span>
+              </Button>
+              <Input placeholder="Workspace name" class="bg-white" />
+            </div>
           </div>
           <div>
-            <Button variant="primary">Next: Choose Module
+            <Button variant="primary" :as="NuxtLink" to="/choose-module">Next: Choose Module
               <Icon name="hugeicons:arrow-right-02" class="w-6 h-6" />
             </Button>
           </div>
