@@ -1,1 +1,1 @@
-export { default as PepyIcon } from './pepy-icon.vue'
+export { default as PepyIcon } from "./pepy-icon.vue";
