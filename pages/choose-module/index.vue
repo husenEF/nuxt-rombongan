@@ -1,5 +1,14 @@
 <script lang="ts" setup>
 import { VerticalStepper } from "@/components/stepper";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import type { IStep } from "@/type/IStep";
 definePageMeta({
   layout: "with-header",
@@ -14,18 +23,20 @@ const steps = [
     title: "Onboarding",
     description: "",
     active: true,
+    finish: true,
   },
   {
     id: 2,
     title: "Set up Workspace",
     description: "",
-    active: false,
+    active: true,
+    finish: true,
   },
   {
     id: 3,
     title: "Choose Module",
     description: "",
-    active: false,
+    active: true,
   },
   {
     id: 4,
@@ -44,25 +55,34 @@ const steps = [
       <div class="max-w-3xl mx-auto flex flex-col gap-4">
         <div>
           <h1 class="text-teal-700 font-bold font-mukta text-4xl font-mukta">
-            Lorem ipsum dolor sit amet consectetur
+            Choose Module
           </h1>
           <h3 class="text-gray-300 font-mukta text-xl">
             Interdum enim at arcu volutpat sit ac sit ultrices. Sodales dui
             semper quis mi.
           </h3>
         </div>
-        <div class="clearfix">
-          <p class="font-mukta text-teal-700 font-medium mb-4">
-            Consequat a senectus et at lacus sapien eu. Eget sollicitudin orci
-            urna nam pellentesque aliquam. Ligula dapibus vitae sed imperdiet
-            eget a ut sit phasellus. Pellentesque vitae mollis auctor eleifend
-            feugiat egestas tempus.
-          </p>
-          <Button variant="primary" as="a" href="/setup-workspace"
-            >Next: Name your Workspace
-            <Icon name="hugeicons:arrow-right-02" class="w-6 h-6" />
-          </Button>
-        </div>
+        <form class="clearfix flex gap-4 flex-col">
+          <div class="w-3/5">
+            <label class="text-teal-600 font-mukta font-semibold">
+              Module
+            </label>
+            <Select>
+              <SelectTrigger>
+                <SelectValue placeholder="Select Module" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="apple"> Apple </SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <div class="w-3/5">
+            <Button variant="primary" as="a" href="/setup-workspace"
+              >Next: Name your Workspace
+              <Icon name="hugeicons:arrow-right-02" class="w-6 h-6" />
+            </Button>
+          </div>
+        </form>
       </div>
     </div>
     <div
