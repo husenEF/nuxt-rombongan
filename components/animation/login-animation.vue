@@ -105,8 +105,8 @@ const left4 = computed(() => ({
 
 <template>
   <div
-    class="left top absolute h-full w-full relative flex"
     ref="target"
+    class="left top absolute h-full w-full relative flex"
     :style="targetStyle"
   >
     <div class="h-full w-1/2 relative">

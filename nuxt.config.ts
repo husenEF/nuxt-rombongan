@@ -4,9 +4,9 @@ import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
 export default defineNuxtConfig({
   app: {
     head: {
-      charset: 'utf-16',
-      viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
-    }
+      charset: "utf-16",
+      viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+    },
   },
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },

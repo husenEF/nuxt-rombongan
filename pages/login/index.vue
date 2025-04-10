@@ -1,6 +1,4 @@
-<script lang="ts">
-export const description = "A simple login form.";
-</script>
+<script lang="ts"></script>
 <script setup lang="ts">
 import LoginAnimation from "~/components/animation/login-animation.vue";
 import LoginForm from "@/components/auth/LoginForm.vue";

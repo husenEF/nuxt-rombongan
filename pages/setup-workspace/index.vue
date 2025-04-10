@@ -35,7 +35,7 @@ const steps = reactive([
     active: false,
   },
 ]);
-const handleSubmit = (data: any) => {
+const handleSubmit = (data: unknown) => {
   console.log({ handleSubmit: data });
 };
 </script>
@@ -45,7 +45,7 @@ const handleSubmit = (data: any) => {
     <div
       class="bg-green-50 justify-center p-4 flex flex-col basis-1/1 md:basis-2/3 md:h-[calc(100vh-96px)]"
     >
-      <div class="max-w-3xl mx-auto flex flex-col gap-4">
+      <div class="w-4/5 mx-auto flex flex-col gap-4">
         <div>
           <h1 class="text-teal-700 font-bold font-mukta text-4xl font-mukta">
             Name Your Workspace
